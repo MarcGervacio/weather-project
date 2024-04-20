@@ -1,4 +1,8 @@
 <div class="title-container">
     <img class="weather-logo" src="../../../assets/weather-project-dark-logo.png" alt="Weather Project Logo">
     <p class="title-message">Weather Forecast</p>
+    <div *ngIf="shouldHaveLogout || shouldHaveBack" class="button-container">
+        <button *ngIf="shouldHaveLogout" class="logout-button" (click)="logoutClicked()">Logout</button>
+        <button *ngIf="shouldHaveBack" class="back-button" (click)="backClicked()">Back</button>
+    </div>
 </div>
