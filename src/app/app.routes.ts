@@ -4,7 +4,7 @@ import { WeatherPageComponent } from './components/weather-page/weather-page.com
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 export const routes: Routes = [
-    { path: '', component: LandingPageComponent },
+    { path: '', component: HomePageComponent },
     { path: 'landing-page', component: LandingPageComponent },
     { path: 'home-page', component: HomePageComponent },
     { path: 'weather-page', component: WeatherPageComponent }
