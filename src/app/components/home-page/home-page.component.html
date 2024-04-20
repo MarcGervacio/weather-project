@@ -1,5 +1,5 @@
 <div class="main-container">
-    <app-header></app-header>
+    <app-header [shouldHaveLogout]="true" (logoutClickEvent)="logoutClicked($event)"></app-header>
     <div class="details-container">
         <div class="personal-details-container">
             <p class="introduction-message">Hi</p>

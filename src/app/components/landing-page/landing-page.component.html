@@ -2,9 +2,20 @@
     <app-header></app-header>
     <div class="details-container">
         <p class="details-message">Welcome to the weather forecast web application</p>
-        <p class="secondary-details-message">Please login with your Github user to use the application and view the weather in your city</p>
+        <p class="secondary-details-message">Please login with valid credentials to use the application and view the weather in your city</p>
+        <div class="input-container">
+            <div class="email-input-container">
+                <p class="email-label">Email</p>
+                <input type="text" class="email-input" placeholder="Enter Email" [formControl]="email">
+            </div>
+            <div class="password-input-container">
+                <p class="password-label">Password</p>
+                <input type="password" class="password-input" placeholder="Enter Password" [formControl]="password">
+            </div>
+        </div>
+        <p *ngIf="!isCredentialsValid" class="error-message">Invalid credentials. Kindly enter valid credentials.</p>
         <div class="button-container">
-            <button class="login-button">Login</button>
+            <button class="login-button" (click)="loginClick()">Login</button>
         </div>
     </div>
 </div>

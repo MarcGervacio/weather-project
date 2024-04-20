@@ -1,6 +1,6 @@
 .main-container {
     height: 100vh;
-    weight: 100vw;
+    width: 100vw;
 
     .details-container {
         text-align: center;
@@ -19,7 +19,50 @@
             margin: 0 0 1.25rem;
         }
 
+        .input-container {
+            text-align: -webkit-center;
+            margin-bottom: 0.25rem;
+
+            .email-input-container {
+                text-align: left;
+                width: fit-content;
+
+                .email-label {
+                    margin: 0 0 0.1rem 0;
+                    color: #000000;
+                }
+
+                .email-input {
+                    font-size: 1.25rem;
+                    padding: 0.25rem;
+                }
+            }
+
+            .password-input-container {
+                text-align: left;
+                width: fit-content;
+
+                .password-label {
+                    margin: 1rem 0 0.1rem 0;
+                    color: #000000;
+                }
+
+                .password-input {
+                    font-size: 1.25rem;
+                    padding: 0.25rem;
+                }
+            }
+        }
+
+        .error-message{
+            margin: 1rem 0 0;
+            color: #f00808;
+            font-size: 1rem;
+        }
+
         .button-container {
+            margin-top: 1rem;
+
             .login-button {
                 background-color: #45f76b;
                 border: none;
