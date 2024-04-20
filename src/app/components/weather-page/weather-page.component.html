@@ -1,5 +1,5 @@
 <div class="main-container">
-    <app-header></app-header>
+    <app-header [shouldHaveBack]="true" (backClickEvent)="backClicked($event)"></app-header>
     <div class="details-container">
         <p class="city-label">{{weatherDetails.cityName}}</p>
         <div class="weather-details">
