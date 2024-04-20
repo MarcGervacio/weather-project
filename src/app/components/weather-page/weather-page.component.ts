@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { WeatherDetails } from '../../models/weather-details.model';
 import { MatTableModule } from '@angular/material/table'
+import { WeatherService } from '../../services/weather.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-weather-page',
@@ -20,6 +22,13 @@ export class WeatherPageComponent implements OnInit {
   /** Data to be displayed in the table details */
   dataSource!: any[];
 
+  constructor(
+    private weatherService: WeatherService,
+    private router: Router
+  ) {
+    // This is intentional
+  }
+
   ngOnInit(): void {
     this.setWeatherDetails();
     this.dataSource = [this.weatherDetails];
@@ -27,14 +36,13 @@ export class WeatherPageComponent implements OnInit {
 
   /** Set the value for the weatherDetails */
   setWeatherDetails(): void {
-    this.weatherDetails = {
-      cityName: 'Sample City',
-      date: new Date(),
-      temperature: 'Sample Temperature',
-      description: 'Sample Description',
-      main: 'Sample Main',
-      pressure: 'Sample Pressure',
-      humidity: 'Sample Humidity'
+    this.weatherDetails = this.weatherService.getWeatherDetails();
+  }
+
+  /** Triggers whenever the back button is clicked */
+  backClicked(status: boolean) {
+    if (status) {
+      this.router.navigate(['home-page']);
     }
   }
 }
