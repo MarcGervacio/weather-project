@@ -1,0 +1,44 @@
+.main-container {
+    height: 100vh;
+    weight: 100vw;
+
+    .details-container {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #027f83;
+
+        .details-message {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 9.375rem 0 1.563rem;
+        }
+
+        .secondary-details-message {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0 0 1.25rem;
+        }
+
+        .button-container {
+            .login-button {
+                background-color: #45f76b;
+                border: none;
+                border-radius: 1rem;
+                font-size: 1rem;
+                font-weight: 700;
+                height: 3rem;
+                width: 5rem;
+                color: #393838;
+            }
+
+            .login-button:hover {
+                background-color: #33cc54;
+            }
+
+            .login-button:active {
+                background-color: #2da848;
+                color: #fafafa;
+            }
+        }
+    }
+}
