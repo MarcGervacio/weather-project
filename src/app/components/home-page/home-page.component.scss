@@ -1,0 +1,83 @@
+.main-container {
+    .details-container {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 9.375rem 0 0;
+
+        .personal-details-container {
+            display: inline-flex;
+
+            p {
+                margin: 0;
+            }
+
+            .introduction-message {
+                font-weight: 800;
+                font-size: 4rem;
+                color: #027f83;
+            }
+
+            .personal-info-container {
+                padding-top: 1.5rem;
+                text-align: left;
+                margin-left: 0.5rem;
+
+                .name {
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                }
+
+                .github-detail {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .weather-details-container {
+            width: 100vw;
+            text-align: -webkit-center;
+
+            .input-container {
+                width: fit-content;
+                text-align: left;
+
+                p {
+                    margin: 0;
+                }
+    
+                .city-input-label {
+                    margin: 1.5rem 0 0.25rem 0;
+                    font-size: 0.7rem;
+                }
+
+                .weather-input-container {
+                    .city-input {
+                        font-size: 1.1rem;
+                        padding: 0.25rem 0 0.25rem 0.25rem;
+                        margin-right: 0.25rem;
+                    }
+
+                    .get-weather-button {
+                        background-color: #45f76b;
+                        border: none;
+                        border-radius: 0.5rem;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        height: 2rem;
+                        width: 9.5rem;
+                        color: #393838;
+                    }
+        
+                    .get-weather-button:hover {
+                        background-color: #33cc54;
+                    }
+        
+                    .get-weather-button:active {
+                        background-color: #2da848;
+                        color: #fafafa;
+                    }
+                }
+            }
+        }
+    }
+}
