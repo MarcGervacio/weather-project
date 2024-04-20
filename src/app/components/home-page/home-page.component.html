@@ -5,15 +5,15 @@
             <p class="introduction-message">Hi</p>
             <div class="personal-info-container">
                 <p class="name">{{name}}</p>
-                <p class="github-detail">{{githubLink}}</p>
+                <p class="email-address">{{emailAddress}}</p>
             </div>
         </div>
         <div class="weather-details-container">
             <div class="input-container">
                 <p class="city-input-label">City</p>
                 <div class="weather-input-container">
-                    <input type="text" class="city-input" placeholder="Enter City">
-                    <button class="get-weather-button">Display Weather</button>
+                    <input type="text" class="city-input" placeholder="Enter City" [formControl]="city">
+                    <button class="get-weather-button" (click)="displayWeatherClicked()">Display Weather</button>
                 </div>
             </div>
         </div>
